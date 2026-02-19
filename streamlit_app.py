@@ -3,7 +3,6 @@ import pandas as pd
 import math
 from pathlib import Path
 from ping_pong_page import render_ping_pong
-from eye_tracking_page import render_eye_tracking
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
@@ -160,4 +159,5 @@ if page == 'GDP dashboard':
 elif page == 'Ping Pong':
     render_ping_pong()
 else:
-    render_eye_tracking()
+        from eye_tracking_page import render_eye_tracking
+        render_eye_tracking()
